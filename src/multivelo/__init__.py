@@ -28,5 +28,8 @@ from .steady_chrom_func import (
     velocity_chrom
 )
 
-from importlib.metadata import version
+try:  # Python < 3.10 (backport) 
+     from importlib_metadata import entry_points 
+except ImportError: 
+     from importlib.metadata import entry_points 
 __version__ = version(__name__)
