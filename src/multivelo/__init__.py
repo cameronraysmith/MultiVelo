@@ -29,7 +29,7 @@ from .steady_chrom_func import (
 )
 
 try:  # Python < 3.10 (backport) 
-     from importlib_metadata import entry_points 
+     from importlib_metadata import version
 except ImportError: 
-     from importlib.metadata import entry_points 
+     from importlib.metadata import version
 __version__ = version(__name__)
